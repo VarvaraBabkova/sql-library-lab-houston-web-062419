@@ -21,8 +21,8 @@ def select_series_title_with_most_human_characters
   #{}"select title from books, characters, character_books where characters.species = 'human';"
   "select series.title, count(species) from series, characters
   where characters.species = 'human'  and characters.series_id = series.id
-  group by series.title 
-   order by count(species) desc ;"
+  group by series.title
+   order by count(species) desc limit 1;"
 
 end
 
