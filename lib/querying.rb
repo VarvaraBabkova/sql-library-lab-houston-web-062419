@@ -29,5 +29,5 @@ end
 def select_character_names_and_number_of_books_they_are_in
   "select characters.name, count(character_books.character_id) from books, characters, character_books
   where characters.id = character_books.character_id and books.id = character_books.book_id
-  group by character_books.character_id order by count(character_books.character_id),characters.name  desc;"
+  group by character_books.character_id order by count(character_books.character_id)  desc order by characters.name asc;"
 end
