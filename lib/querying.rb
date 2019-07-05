@@ -14,7 +14,7 @@ end
 
 def select_name_and_series_subgenres_of_authors
   "select authors.name, subgenres.name from authors, subgenres, series
-  where authors.id = series.author_id and series.author_id = subgenres.series_id;"
+  where authors.id = series.author_id and series.subgenre_id = subgenres.id;"
 end
 
 def select_series_title_with_most_human_characters
